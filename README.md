@@ -17,7 +17,27 @@ npm test
 
 ```js
 var useware = require('useware-context')
+
+function fn1 () {
+  return this.foo
+}
+function fn2 () {
+  return this.bar
+}
+var args = useware({foo: 'baz', bar: 'qux'}, [1, 2, [fn1, 3]], 'arg', fn2)
+
+console.log(args) //=> [fn1, fn2]
+console.log(args[0]()) //=> 'baz'
+console.log(args[1]()) //=> 'qux'
 ```
+
+
+## Related
+- [arr-filter](https://github.com/jonschlinkert/arr-filter): Faster alternative to javascript's native filter method.
+- [benz](https://github.com/tunnckocore/benz): Compose your control flow with absolute elegance. Support async/await, callbacks, thunks, generators,… [more](https://github.com/tunnckocore/benz)
+- [bind-context](https://github.com/tunnckocore/bind-context): Bind context to the given function and preserves her name. Or set… [more](https://github.com/tunnckocore/bind-context)
+- [useware](https://github.com/tunnckocore/useware): Accept Arguments object or multiple arguments that can be any value, including… [more](https://github.com/tunnckocore/useware)
+- [vez](https://github.com/tunnckocore/vez): Middleware composition at new level. Ultimate alternative to `ware`, `plugins`, `koa-compose` and… [more](https://github.com/tunnckocore/vez)
 
 
 ## Contributing
