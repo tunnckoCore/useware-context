@@ -1,0 +1,51 @@
+{
+  "name": "useware-context",
+  "version": "0.0.0",
+  "description": "Much like `useware` but with the ability to bind given context to each function.",
+  "repository": "tunnckoCore/useware-context",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "arr-filter-fn": "~1.0.0",
+    "bind-context": "~1.0.0",
+    "is-arguments": "~1.0.1",
+    "is-plain-object": "~2.0.1",
+    "manage-arguments": "~1.0.0"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "keywords": [
+    "any",
+    "args",
+    "arguments",
+    "arr",
+    "array",
+    "bind",
+    "context",
+    "control",
+    "ctx",
+    "deep",
+    "deeply",
+    "expand",
+    "extract",
+    "filter",
+    "flow",
+    "function",
+    "manage",
+    "middleware",
+    "multiple",
+    "nested",
+    "type",
+    "typeof",
+    "useware",
+    "util",
+    "val",
+    "value",
+    "ware"
+  ]
+}
