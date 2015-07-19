@@ -1,6 +1,6 @@
 {
   "name": "useware-context",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Much like `useware` but with the ability to bind given context to each function.",
   "repository": "tunnckoCore/useware-context",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
