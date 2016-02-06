@@ -8,7 +8,6 @@
 ## Install
 ```
 npm i useware-context --save
-npm test
 ```
 
 
@@ -16,15 +15,21 @@ npm test
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var useware = require('useware-context')
+const useware = require('useware-context')
 
 function fn1 () {
   return this.foo
 }
+
 function fn2 () {
   return this.bar
 }
-var args = useware({foo: 'baz', bar: 'qux'}, [1, 2, [fn1, 3]], 'arg', fn2)
+
+// pass context as first argument
+const args = useware({
+  foo: 'baz',
+  bar: 'qux'
+}, [1, 2, [fn1, 3]], 'arg', fn2)
 
 console.log(args) //=> [fn1, fn2]
 console.log(args[0]()) //=> 'baz'
@@ -53,7 +58,7 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [npmjs-url]: https://www.npmjs.com/package/useware-context
 [npmjs-img]: https://img.shields.io/npm/v/useware-context.svg?label=useware-context
 
-[license-url]: https://github.com/tunnckoCore/useware-context/blob/master/LICENSE.md
+[license-url]: https://github.com/tunnckoCore/useware-context/blob/master/LICENSE
 [license-img]: https://img.shields.io/badge/license-MIT-blue.svg
 
 

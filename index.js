@@ -1,7 +1,7 @@
 /*!
  * useware-context <https://github.com/tunnckoCore/useware-context>
  *
- * Copyright (c) 2015 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
+ * Copyright (c) 2015-2016 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
 
@@ -13,7 +13,7 @@ var isObject = require('is-plain-object')
 var isArguments = require('is-arguments')
 var manageArguments = require('manage-arguments')
 
-module.exports = function useware (val) {
+module.exports = function usewareContext (val) {
   var args = isArguments(val) ? manageArguments(val) : manageArguments(arguments)
   var ctx = this || {}
   if (isObject(args[0])) {
