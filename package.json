@@ -11,11 +11,10 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "arr-filter-fn": "~1.0.0",
-    "bind-context": "~1.0.0",
-    "is-arguments": "~1.0.1",
-    "is-plain-object": "~2.0.1",
-    "manage-arguments": "~1.0.0"
+    "arr-map": "^2.0.0",
+    "bind-context": "^1.0.0",
+    "is-plain-object": "^2.0.1",
+    "useware": "^1.0.3"
   },
   "devDependencies": {
     "assertit": "^0.1.0",

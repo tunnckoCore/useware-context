@@ -7,21 +7,16 @@
 
 'use strict'
 
-var bind = require('bind-context')
-var filter = require('arr-filter-fn')
+var bindContext = require('bind-context')
 var isObject = require('is-plain-object')
-var isArguments = require('is-arguments')
-var manageArguments = require('manage-arguments')
+var useware = require('useware')
+var map = require('arr-map')
 
-module.exports = function usewareContext (val) {
-  var args = isArguments(val) ? manageArguments(val) : manageArguments(arguments)
-  var ctx = this || {}
-  if (isObject(args[0])) {
-    ctx = args[0]
-    args = args.slice(1)
-  }
+module.exports = function usewareContext () {
+  var args = useware.apply(this, arguments)
+  var ctx = isObject(arguments[0]) ? arguments[0] : (this || {})
 
-  return filter.call(ctx, args, function (fn) {
-    return bind(fn, this)
+  return map(args, function (fn) {
+    return bindContext(fn, ctx)
   })
 }
