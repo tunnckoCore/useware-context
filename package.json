@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "arr-map": "^2.0.0",
-    "bind-context": "^1.0.0",
+    "bind-context": "^2.0.0",
     "is-plain-object": "^2.0.1",
     "useware": "^1.0.3"
   },
