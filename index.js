@@ -13,10 +13,10 @@ var useware = require('useware')
 var map = require('arr-map')
 
 module.exports = function usewareContext () {
-  var args = useware.apply(this, arguments)
+  var args = useware(arguments)
   var ctx = isObject(arguments[0]) ? arguments[0] : (this || {})
 
   return map(args, function (fn) {
-    return bindContext(fn, ctx)
+    return bindContext(ctx, fn)
   })
 }
