@@ -1,7 +1,7 @@
 {
   "name": "useware-context",
   "version": "1.0.2",
-  "description": "Much like `useware`, but with the ability to bind given context to each function.",
+  "description": "Much like [useware][], but with the ability to bind given context to each function.",
   "repository": "tunnckoCore/useware-context",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "precommit.silent": true,
@@ -50,5 +50,31 @@
     "util",
     "value",
     "ware"
-  ]
+  ],
+  "verb": {
+    "run": true,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "related": {
+      "list": [
+        "arr-filter",
+        "arr-map",
+        "bind-context",
+        "useware",
+        "use",
+        "async-control",
+        "ware",
+        "plugins",
+        "vez"
+      ]
+    },
+    "reflinks": [
+      "useware"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
 }
