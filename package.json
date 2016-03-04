@@ -13,7 +13,9 @@
   "dependencies": {
     "arr-map": "^2.0.0",
     "bind-context": "^2.0.1",
-    "is-plain-object": "^2.0.1",
+    "is-arguments": "^1.0.2",
+    "isobject": "^2.0.0",
+    "lazy-cache": "^1.0.3",
     "useware": "^1.0.3"
   },
   "devDependencies": {
@@ -21,7 +23,8 @@
     "pre-commit": "*"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "keywords": [
     "any",

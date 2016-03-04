@@ -7,16 +7,17 @@
 
 'use strict'
 
-var bindContext = require('bind-context')
-var isObject = require('is-plain-object')
-var useware = require('useware')
-var map = require('arr-map')
+var utils = require('./utils')
 
 module.exports = function usewareContext () {
-  var args = useware(arguments)
-  var ctx = isObject(arguments[0]) ? arguments[0] : (this || {})
+  var args = utils.useware.apply(this, arguments)
+  var ctx = utils.isObject(arguments[0]) ? arguments[0] : (this || {})
 
-  return map(args, function (fn) {
-    return bindContext(ctx, fn)
+  if (utils.isArguments(arguments[1])) {
+    args = utils.useware.apply(this, arguments[1])
+  }
+
+  return utils.arrMap(args, function (fn) {
+    return utils.bindContext(ctx, fn)
   })
 }
