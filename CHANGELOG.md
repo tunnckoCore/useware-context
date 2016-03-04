@@ -1,5 +1,11 @@
 
 
+## 1.0.3 - 2016-03-04
+- Release v1.0.3 / npm@v1.0.3
+- use `verb`, generate docs
+- use `lazy-cache`
+- update tests
+
 ## 1.0.2 - 2016-03-04
 - Release v1.0.2 / npm@v1.0.2
 - update dep: `bind-context@2`
